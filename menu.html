@@ -9,22 +9,22 @@
 <body>
 
     <!-- Navbar -->
-    <nav>
+    <nav class="navbar">
+        <div class="nav-logo">Ayam Penyet</div>
         <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        <ul id="navbar">
+        <ul id="navbar" class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="more-icon">&#x22EE;</div>
     </nav>
 
     <header>
         <h1>Our Menu</h1>
     </header>
 
-    <!-- Grid Menu with Horizontal Swipe -->
-    <section class="menu-grid horizontal-swipe">
+    <!-- Grid Menu -->
+    <section class="menu-grid">
         <div class="menu-item">
             <img src="aym.jpg" alt="Ayam Penyet Covid-19">
             <p>Ayam Penyet Covid-19</p>
@@ -40,7 +40,21 @@
             <p>Tempe Goreng</p>
             <button onclick="addToCart('tempe', 55000)">Add to Cart</button>
         </div>
-        <!-- More items -->
+        <div class="menu-item">
+            <img src="terong.jpg" alt="Terong Goreng">
+            <p>Terong Goreng</p>
+            <button onclick="addToCart('terong', 55000)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="petai.jpg" alt="Petai Goreng">
+            <p>Petai Goreng</p>
+            <button onclick="addToCart('petai', 55000)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="esteh.jpg" alt="Es Teh">
+            <p>Es Teh</p>
+            <button onclick="addToCart('es teh', 55000)">Add to Cart</button>
+        </div>
     </section>
 
     <script src="script.js"></script>
