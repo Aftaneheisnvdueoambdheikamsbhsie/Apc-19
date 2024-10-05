@@ -56,13 +56,31 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper('.swiper-container', {
+            var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             spaceBetween: 10,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+            loop: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // When the window is >= 640px wide, show 2 slides at a time
+                640: {
+                    slidesPerView: 2,
+                },
+                // When the window is >= 768px wide, show 3 slides at a time
+                768: {
+                    slidesPerView: 3,
+                },
+                // When the window is >= 1024px wide, show 4 slides at a time
+                1024: {
+                    slidesPerView: 4,
+                },
             },
         });
     </script>
