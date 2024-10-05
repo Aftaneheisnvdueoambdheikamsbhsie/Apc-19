@@ -141,3 +141,16 @@ h2 {
 .menu-item button:hover {
     background-color: #f49700;
 }
+
+/* Horizontal Swipe for Mobile */
+.horizontal-swipe {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 10px;
+}
+
+.horizontal-swipe .menu-item {
+    flex: 0 0 auto;
+    width: 200px;
+}
