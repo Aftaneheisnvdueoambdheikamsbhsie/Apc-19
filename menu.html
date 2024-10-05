@@ -4,177 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Ayam Penyet Covid-19</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-        }
-
-        /* Navbar Styling */
-        nav {
-            background: linear-gradient(90deg, #ff8a00, #e52e71);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #f2f2f2;
-        }
-
-        nav .cart {
-            color: white;
-            font-size: 18px;
-        }
-
-        .menu-toggle {
-            display: none;
-        }
-
-        /* Hamburger Menu for Small Screens */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                display: none;
-                width: 100%;
-                background-color: #ff8a00;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                color: white;
-                font-size: 24px;
-            }
-
-            .menu-toggle.active {
-                color: #fff;
-            }
-        }
-
-        header {
-            background-color: #f8b400;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .menu-item {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .menu-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .menu-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .menu-item p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        .menu-item button {
-            background-color: #f8b400;
-            border: none;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .menu-item button:hover {
-            background-color: #f49700;
-        }
-
-        /* Swiper settings for mobile */
-        @media (max-width: 768px) {
-            .menu-grid {
-                display: none; /* Hide grid on mobile */
-            }
-            .swiper-container {
-                width: 100%;
-                height: auto;
-            }
-
-            .swiper-slide {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .swiper-slide img {
-                max-width: 80%;
-                height: auto;
-                border-radius: 8px;
-            }
-        }
-
-        /* Display grid on larger screens */
-        @media (min-width: 768px) {
-            .swiper-container {
-                display: none; /* Hide swiper on larger screens */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -186,16 +16,14 @@
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="cart">
-            Cart: <span id="cart-count">0</span> items
-        </div>
+        <div class="more-icon">&#x22EE;</div>
     </nav>
 
     <header>
-        <h1>Our Ayam Penyet Covid Menu</h1>
+        <h1>Our Menu</h1>
     </header>
 
-    <!-- Grid Layout for desktop -->
+    <!-- Grid Menu Section -->
     <section class="menu-grid">
         <div class="menu-item">
             <img src="aym.jpg" alt="Ayam Penyet Covid-19">
@@ -212,88 +40,9 @@
             <p>Tempe Goreng</p>
             <button onclick="addToCart('tempe', 55000)">Add to Cart</button>
         </div>
-        <div class="menu-item">
-            <img src="terong.jpg" alt="Terong Goreng">
-            <p>Terong Goreng</p>
-            <button onclick="addToCart('terong', 55000)">Add to Cart</button>
-        </div>
-        <div class="menu-item">
-            <img src="petai.jpg" alt="Petai Goreng">
-            <p>Petai Goreng</p>
-            <button onclick="addToCart('petai', 55000)">Add to Cart</button>
-        </div>
-        <div class="menu-item">
-            <img src="esteh.jpg" alt="Es Teh">
-            <p>Es Teh</p>
-            <button onclick="addToCart('es teh', 55000)">Add to Cart</button>
-        </div>
+        <!-- Add more items as needed -->
     </section>
 
-    <!-- Swiper slider for mobile -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="aym.jpg" alt="Ayam Penyet Covid-19">
-                <p>Ayam Penyet Covid-19</p>
-                <button onclick="addToCart('ayam', 50000)">Add to Cart</button>
-            </div>
-            <div class="swiper-slide">
-                <img src="tahu.jpg" alt="Tahu Goreng">
-                <p>Tahu Goreng</p>
-                <button onclick="addToCart('tahu', 55000)">Add to Cart</button>
-            </div>
-            <div class="swiper-slide">
-                <img src="tempe.jpg" alt="Tempe Goreng">
-                <p>Tempe Goreng</p>
-                <button onclick="addToCart('tempe', 55000)">Add to Cart</button>
-            </div>
-            <div class="swiper-slide">
-                <img src="terong.jpg" alt="Terong Goreng">
-                <p>Terong Goreng</p>
-                <button onclick="addToCart('terong', 55000)">Add to Cart</button>
-            </div>
-            <div class="swiper-slide">
-                <img src="petai.jpg" alt="Petai Goreng">
-                <p>Petai Goreng</p>
-                <button onclick="addToCart('petai', 55000)">Add to Cart</button>
-            </div>
-            <div class="swiper-slide">
-                <img src="esteh.jpg" alt="Es Teh">
-                <p>Es Teh</p>
-                <button onclick="addToCart('es teh', 55000)">Add to Cart</button>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        // Swiper initialization
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-
-        // Cart functionality
-        let cartCount = 0;
-
-        function addToCart(item, price) {
-            cartCount++;
-            document.getElementById('cart-count').innerText = cartCount;
-            alert(item + " added to cart at Rp " + price);
-        }
-
-        // Toggle Menu for small screens
-        const menuToggle = document.getElementById('menu-toggle');
-        const navbar = document.getElementById('navbar');
-
-        menuToggle.addEventListener('click', function() {
-            navbar.classList.toggle('active');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
