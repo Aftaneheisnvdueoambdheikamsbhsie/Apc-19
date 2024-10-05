@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,53 +6,55 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Navbar Styling */
-nav {
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
-    padding: 10px 20px;
+/* Navbar Styles */
+.navbar {
+    background: #ff8a00;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-    list-style-type: none;
+.nav-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
 }
 
-nav ul li {
+.nav-links li {
     margin-right: 20px;
 }
 
-nav ul li a {
-    text-decoration: none;
+.nav-links li a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #f2f2f2;
+.nav-links li a:hover {
+    text-decoration: underline;
 }
 
+/* Menu Toggle (Hamburger Icon) */
 .menu-toggle {
     display: none;
-}
-
-.more-icon {
+    background-color: transparent;
+    border: none;
     font-size: 24px;
     color: white;
     cursor: pointer;
 }
 
-/* Hamburger Menu for Small Screens */
 /* Hamburger Menu for Mobile */
 @media (max-width: 768px) {
     .nav-links {
@@ -66,28 +69,20 @@ nav ul li a:hover {
         border-radius: 5px;
     }
 
-    nav ul.active {
+    .nav-links.active {
         display: flex;
     }
 
     .menu-toggle {
         display: block;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        color: white;
-        font-size: 24px;
-    }
-
-    .menu-toggle.active {
-        color: #fff;
     }
 }
 
+/* Header */
 header {
     background-color: #f8b400;
-    padding: 20px;
     text-align: center;
+    padding: 50px 0;
     color: white;
 }
 
@@ -95,42 +90,33 @@ h1 {
     margin: 0;
 }
 
-h2 {
-    color: #e52e71;
-}
-
-/* Grid Menu */
+/* Menu Grid Styling */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .menu-item {
-    background-color: #ffffff;
+    background-color: white;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s;
 }
 
 .menu-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img {
     max-width: 100%;
-    height: auto;
     border-radius: 8px;
 }
 
 .menu-item p {
-    font-size: 16px;
     margin: 10px 0;
 }
 
@@ -141,22 +127,8 @@ h2 {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .menu-item button:hover {
     background-color: #f49700;
-}
-
-/* Horizontal Swipe for Mobile */
-.horizontal-swipe {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px;
-    gap: 10px;
-}
-
-.horizontal-swipe .menu-item {
-    flex: 0 0 auto;
-    width: 200px;
 }
