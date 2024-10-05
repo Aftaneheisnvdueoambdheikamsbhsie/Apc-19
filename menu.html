@@ -4,85 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Ayam Penyet Covid-19</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f8b400;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-item {
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .menu-item button {
+            background-color: #f8b400;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item button:hover {
+            background-color: #f49700;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Swiper settings for mobile */
+        @media (max-width: 768px) {
+            .menu-grid {
+                display: none; /* Hide grid on mobile */
+            }
+            .swiper-container {
+                width: 100%;
+                height: auto;
+            }
+
+            .swiper-slide {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .swiper-slide img {
+                max-width: 80%;
+                height: auto;
+                border-radius: 8px;
+            }
+        }
+
+        /* Display grid on larger screens */
+        @media (min-width: 768px) {
+            .swiper-container {
+                display: none; /* Hide swiper on larger screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Our Ayam Penyet Covid Menu</h1>
     </header>
 
-    <!-- Swiper Slider Container -->
+    <!-- Grid Layout for desktop -->
+    <section class="menu-grid">
+        <div class="menu-item">
+            <img src="aym.jpg" alt="Ayam Penyet Covid-19">
+            <p>Ayam Penyet Covid-19</p>
+            <button onclick="addToCart('ayam', 50000)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="tahu.jpg" alt="Tahu Goreng">
+            <p>Tahu Goreng</p>
+            <button onclick="addToCart('tahu', 55000)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="tempe.jpg" alt="Tempe Goreng">
+            <p>Tempe Goreng</p>
+            <button onclick="addToCart('tempe', 55000)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="terong.jpg" alt="Terong Goreng">
+            <p>Terong Goreng</p>
+            <button onclick="addToCart('terong', 55000)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="petai.jpg" alt="Petai Goreng">
+            <p>Petai Goreng</p>
+            <button onclick="addToCart('petai', 55000)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="esteh.jpg" alt="Es Teh">
+            <p>Es Teh</p>
+            <button onclick="addToCart('es teh', 55000)">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Swiper slider for mobile -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <!-- Slide 1 -->
             <div class="swiper-slide">
-                <img src="aym.jpg" alt="ayam">
+                <img src="aym.jpg" alt="Ayam Penyet Covid-19">
                 <p>Ayam Penyet Covid-19</p>
                 <button onclick="addToCart('ayam', 50000)">Add to Cart</button>
             </div>
-            <!-- Slide 2 -->
             <div class="swiper-slide">
-                <img src="tahu.jpg" alt="tahu">
+                <img src="tahu.jpg" alt="Tahu Goreng">
                 <p>Tahu Goreng</p>
                 <button onclick="addToCart('tahu', 55000)">Add to Cart</button>
             </div>
-            <!-- Add more slides as needed -->
-             <div class="swiper-slide">
-                <img src="tempe.jpg" alt="tempe">
+            <div class="swiper-slide">
+                <img src="tempe.jpg" alt="Tempe Goreng">
                 <p>Tempe Goreng</p>
                 <button onclick="addToCart('tempe', 55000)">Add to Cart</button>
-        </div>
-        <!-- Add pagination or navigation controls if needed -->
-             <div class="swiper-slide">
-                <img src="terong.jpg" alt="terong">
+            </div>
+            <div class="swiper-slide">
+                <img src="terong.jpg" alt="Terong Goreng">
                 <p>Terong Goreng</p>
                 <button onclick="addToCart('terong', 55000)">Add to Cart</button>
-    </div>
-                <div class="swiper-slide">
-                <img src="petai.jpg" alt="petai">
+            </div>
+            <div class="swiper-slide">
+                <img src="petai.jpg" alt="Petai Goreng">
                 <p>Petai Goreng</p>
-                <button onclick="addToCart('Petai', 55000)">Add to Cart</button>
-    </div>
-             <div class="swiper-slide">
-                <img src="esteh.jpg" alt="terong">
-                <p>Es TEH</p>
+                <button onclick="addToCart('petai', 55000)">Add to Cart</button>
+            </div>
+            <div class="swiper-slide">
+                <img src="esteh.jpg" alt="Es Teh">
+                <p>Es Teh</p>
                 <button onclick="addToCart('es teh', 55000)">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Swiper Pagination & Navigation (optional) -->
+        <div class="swiper-pagination"></div>
     </div>
-    <!-- Swiper.js JavaScript -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-            var swiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             spaceBetween: 10,
-            loop: false,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
             breakpoints: {
-                // When the window is >= 640px wide, show 2 slides at a time
                 640: {
                     slidesPerView: 2,
+                    spaceBetween: 20,
                 },
-                // When the window is >= 768px wide, show 3 slides at a time
                 768: {
                     slidesPerView: 3,
+                    spaceBetween: 30,
                 },
-                // When the window is >= 1024px wide, show 4 slides at a time
                 1024: {
                     slidesPerView: 4,
+                    spaceBetween: 40,
                 },
             },
         });
+
+        function addToCart(item, price) {
+            alert(item + " added to cart at Rp " + price);
+        }
     </script>
 </body>
 </html>
