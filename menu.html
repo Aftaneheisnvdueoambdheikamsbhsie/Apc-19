@@ -9,22 +9,22 @@
 <body>
 
     <!-- Navbar -->
-    <nav>
+    <nav class="navbar">
+        <div class="nav-logo">Ayam Penyet</div>
         <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        <ul id="navbar">
+        <ul id="navbar" class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="more-icon">&#x22EE;</div>
     </nav>
 
     <header>
         <h1>Our Menu</h1>
     </header>
 
-    <!-- Grid Menu Section -->
-    <section class="menu-grid">
+    <!-- Grid Menu with Horizontal Swipe -->
+    <section class="menu-grid horizontal-swipe">
         <div class="menu-item">
             <img src="aym.jpg" alt="Ayam Penyet Covid-19">
             <p>Ayam Penyet Covid-19</p>
@@ -40,7 +40,7 @@
             <p>Tempe Goreng</p>
             <button onclick="addToCart('tempe', 55000)">Add to Cart</button>
         </div>
-        <!-- Add more items as needed -->
+        <!-- More items -->
     </section>
 
     <script src="script.js"></script>
