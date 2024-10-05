@@ -1,27 +1,92 @@
+/* Global Styling */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-header img {
-    width: 100px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-}
-
-.menu-item {
-    display: inline-block;
-    width: 200px;
+header {
     text-align: center;
-    margin: 10px;
+    padding: 20px;
+    background-color: #2d2d2d;
+    color: white;
 }
 
-button {
-    background-color: orange;
+h1 {
+    margin: 0;
+}
+
+/* Swiper Container Styling */
+.swiper-container {
+    padding: 20px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-10px);
+}
+
+/* Menu Item Styling */
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.menu-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.menu-info p {
+    font-size: 1em;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.menu-info button {
+    background-color: #ff6b6b;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-info button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Pagination and Navigation Styling */
+.swiper-pagination {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #ff6b6b;
 }
